@@ -27,12 +27,12 @@ def main():
             word_to_encrypt = str(input("Enter the word to encrypt:"))
             key = int(input("Enter the key to encrypt:"))
             permutation_pattern = str(input("Enter the permutation keyword:"))
-            encrypted = caesar_cipher_with_two_keys(word_to_encrypt, key, generate_permutation_key(permutation_pattern))
+            encrypted = caesar_cipher_with_two_keys(word_to_encrypt, key, generate_permutation_key(permutation_pattern, key))
             print("Encrypted text:", encrypted)
             word_to_decrypt = str(input("Enter the word to decrypt:"))
             key = int(input("Enter the key:"))
             permutation_pattern = str(input("Enter the permutation keyword:"))
-            decrypted = caesar_decipher_with_two_keys(word_to_decrypt, key, generate_permutation_key(permutation_pattern))
+            decrypted = caesar_decipher_with_two_keys(word_to_decrypt, key, generate_permutation_key(permutation_pattern, key))
             print("Decrypted text:", decrypted)
         elif choice == "3":
             break
